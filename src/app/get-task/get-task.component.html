@@ -1,0 +1,30 @@
+
+<input type="text" placeholder="Add Task" (keyup)="enter($event)" #input class="mt-2">
+
+<div class="text-center">
+  <button class="btn btn-success" (click)="addTodolist()">Add Task</button>
+</div>
+
+
+<div class="wrapper">
+  <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" >Id</th>
+                <th scope="col">Task</th>
+                <th scope="col">Satus</th>
+                <th>Remove Task</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let x of list; let i = index; let e = even">
+          <td *ngIf="x.task">{{i}}</td>
+          <td *ngIf="x.task">{{x.task}}</td>
+          <td *ngIf="x.task"><p class="btn btn-success">Complete Task</p></td>
+          <td *ngIf="x.task"><a class="btn btn-danger" (click)="removeTask(x)">Delete Task</a></td>
+         </tr>
+        </tbody>
+    </table>
+</div>
+</div>

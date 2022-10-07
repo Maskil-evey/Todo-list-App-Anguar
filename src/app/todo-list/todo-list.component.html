@@ -1,0 +1,25 @@
+<h5 class="bg-primary text-light p-3 ">To-Do App</h5>
+<div class="container-fluid">
+  <div class="row d-flex bg-light fw-bold shadow-sm">
+    <div class="col-6 hover" [class]="active" (click)="switchRoleList()">
+      <p class="text-center  small m-2" >Todo-List</p>
+    </div>
+    <div class="col-6 hover" [class]="active2" (click)="switchRoleCompleted()">
+      <P class="text-center small m-2">Completed Task</P>
+    </div>
+  </div>
+</div>
+
+<div [ngSwitch]="role">
+    <div *ngSwitchCase="'list'">
+    <app-get-task></app-get-task>
+    </div>
+
+
+
+
+  <div *ngSwitchCase="'completed'">
+    <!-- <div #man></div> -->
+    <app-completed></app-completed>
+  </div>
+</div>

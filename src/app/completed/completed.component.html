@@ -1,0 +1,17 @@
+<div class="table-responsive small">
+  <table class="table2">
+    <thead>
+      <tr class="border border-top-0  border-end-0 border-1">
+        <th scope="col" class="pe-5">Task</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of completedlist">
+        <td>{{x.task}}</td>
+        <td>Complete</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
